@@ -7,6 +7,9 @@
 *.dll
 *.so
 *.dylib
+bin/
+dist/
+tmp/
 
 # Test binary, built with `go test -c`
 *.test
@@ -18,7 +21,7 @@ coverage.*
 profile.cov
 
 # Dependency directories (remove the comment below to include it)
-# vendor/
+vendor/
 
 # Go workspace file
 go.work
@@ -28,5 +31,21 @@ go.work.sum
 .env
 
 # Editor/IDE
-# .idea/
-# .vscode/
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+build-errors.log
+
+# Swagger docs (generated)
+api/docs/docs.go
+api/docs/swagger.json
+api/docs/swagger.yaml
