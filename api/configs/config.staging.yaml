@@ -1,0 +1,36 @@
+# ===========================================
+# YAGO REST API - Staging Configuration
+# ===========================================
+#
+# This file contains staging-specific overrides
+# 📋 For ALL configuration options see: config.yaml (base configuration)  
+# 🔧 Environment variables (.env) have highest priority and will override these values
+#
+# ===========================================
+
+app:
+  name: "YAGO API (staging)"
+  environment: "staging"
+  debug: false                      # Debug disabled in staging
+
+database:
+  host: "postgres"
+  port: 5432
+  user: "yago"
+  password: ""                      # Default for staging (override with DATABASE_PASSWORD)
+  name: "yago"
+  sslmode: "require"                # SSL required in staging
+
+jwt:
+  ttlhours: 24
+
+server:
+  port: "9009"
+  readtimeout: 10
+  writetimeout: 10
+  idletimeout: 120
+  shutdowntimeout: 30
+  maxheaderbytes: 1048576
+
+logging:
+  level: "info"

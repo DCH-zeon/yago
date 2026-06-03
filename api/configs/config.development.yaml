@@ -1,0 +1,36 @@
+# ===========================================
+# YAGO REST API - Development Configuration
+# ===========================================
+#
+# This file contains development-specific overrides
+# 📋 For ALL configuration options see: config.yaml (base configuration)
+# 🔧 Environment variables (.env) have highest priority and will override these values
+#
+# ===========================================
+
+app:
+  name: "YAGO API (dev)"
+  environment: "development"
+  debug: true                     # Enable debug mode in development
+
+database:
+  host: "postgres"
+  port: 5432
+  user: "yago"
+  password: "secret"              # Default password for development
+  name: "yago"
+  sslmode: "disable"              # SSL disabled for development convenience
+
+jwt:
+  ttlhours: 24
+
+server:
+  port: "9009"
+  readtimeout: 10
+  writetimeout: 10
+  idletimeout: 120
+  shutdowntimeout: 30
+  maxheaderbytes: 1048576
+
+logging:
+  level: "debug"
